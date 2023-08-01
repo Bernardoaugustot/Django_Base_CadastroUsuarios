@@ -17,8 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from app_cad_usuarios import views
+
 urlpatterns = [
     # Rota, view Responsavel, nome de referencia
     # path("/conteudos/",)
-    path('',views.home, name='home')
-]
+    path('',views.home, name='home'),
+    path('usuarios/', views.usuarios, name='listagem_usuario')
+    ]
